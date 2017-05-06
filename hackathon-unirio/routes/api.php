@@ -13,11 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => 'auth.jwt'], function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
-
+Route::group(['middleware' => 'jwt.auth'], function () {
+    Route::resource('user', 'UserController');
     Route::resource('curso','CursoController');
     Route::resource('disciplina','DisciplinaController');
     Route::resource('monitoria','MonitoriaController');

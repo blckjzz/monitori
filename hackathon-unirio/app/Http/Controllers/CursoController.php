@@ -56,7 +56,7 @@ class CursoController extends Controller
      */
     public function edit($id)
     {
-        //
+        return response()->setStatusCode(501);
     }
 
     /**
