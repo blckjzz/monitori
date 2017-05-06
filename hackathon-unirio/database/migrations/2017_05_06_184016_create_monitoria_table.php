@@ -21,6 +21,7 @@ class CreateMonitoriaTable extends Migration
             $table->text('avaliacao')->nullable();
             $table->unsignedInteger('monitor_id');
             $table->unsignedInteger('monitorado_id');
+            $table->unsignedInteger('disciplina_id');
             $table->softDeletes();
             $table->foreign('monitor_id')->references('id')->on('mo_users')->onDelete('cascade');
             $table->foreign('monitorado_id')->references('id')->on('mo_users')->onDelete('cascade');
@@ -35,6 +36,6 @@ class CreateMonitoriaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mo_curso_disciplina');
+        Schema::dropIfExists('mo_monitorias');
     }
 }
