@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Curso;
 class CursoController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Curso::all());
     }
 
     /**
@@ -23,7 +23,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        //
+        return response()->setStatusCode(501);
     }
 
     /**
@@ -34,7 +34,8 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Curso::create($request->all());
+        return response()->json(['success' => 'Criado'])->getStatusCode(201);
     }
 
     /**
@@ -45,7 +46,8 @@ class CursoController extends Controller
      */
     public function show($id)
     {
-        //
+        $curso = Curso::find($id);
+        return response()->json($curso);
     }
 
     /**
@@ -68,7 +70,7 @@ class CursoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return response()->setStatusCode(501);
     }
 
     /**
@@ -79,6 +81,6 @@ class CursoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return response()->setStatusCode(501);
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Disciplina extends Model
 {
-    protected $table = 'os_disciplinas';
+    protected $table = 'mo_disciplinas';
 
     protected $fillable = [
         'codigo',
