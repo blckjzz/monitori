@@ -10,13 +10,13 @@
   justify-content: center !important;
   flex-direction: column !important;
 }
-.form-login-wrapper > h1 {
+.flex-wrapper > h1 {
   font-size: 5em;
   font-family: 'Catamaran', sans-serif;
   font-weight: 900;
   text-shadow: 2px 2px 2px #fff;
 }
-.form-login-wrapper > h1:after {
+.flex-wrapper > h1:after {
   content: "";
   display: block;
   margin: 0 auto;

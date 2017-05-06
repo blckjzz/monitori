@@ -8142,13 +8142,13 @@ button.close {
   justify-content: center !important;
   flex-direction: column !important; }
 
-.form-login-wrapper > h1 {
+.flex-wrapper > h1 {
   font-size: 5em;
   font-family: 'Catamaran', sans-serif;
   font-weight: 900;
   text-shadow: 2px 2px 2px #fff; }
 
-.form-login-wrapper > h1:after {
+.flex-wrapper > h1:after {
   content: "";
   display: block;
   margin: 0 auto;
@@ -8171,6 +8171,15 @@ button.close {
   font-weight: 900;
   position: relative;
   z-index: 2; }
+
+#quero-aprender h2:after, #quero-ensinar h2:after {
+  content: "";
+  display: block;
+  padding-top: 5px;
+  margin: 0 auto;
+  height: 1px;
+  width: inherit;
+  border-bottom: 4px solid #f0ad4e; }
 
 #quero-aprender img, #quero-ensinar img {
   position: absolute;

@@ -14,6 +14,15 @@
   position: relative;
   z-index: 2;
 }
+#quero-aprender h2:after, #quero-ensinar h2:after{
+  content: "";
+  display: block;
+  padding-top: 5px;
+  margin: 0 auto;
+  height: 1px;
+  width: inherit;
+  border-bottom: 4px solid #f0ad4e;
+}
 #quero-aprender img, #quero-ensinar img{
   position: absolute;
   left: 0;
