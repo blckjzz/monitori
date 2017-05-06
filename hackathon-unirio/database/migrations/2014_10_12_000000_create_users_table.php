@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('matricula');
             $table->string('password');
+            $table->integer('uni_coin');
             $table->string('nome');
             $table->string('nome_social')->nullable();
             $table->string('email')->unique();
