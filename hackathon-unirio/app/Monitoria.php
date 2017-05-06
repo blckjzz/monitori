@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Monitoria extends Model
 {
-    protected $table = 'os_monitorias';
+    protected $table = 'mo_monitorias';
 
     protected $fillable = [
         'aceita',
