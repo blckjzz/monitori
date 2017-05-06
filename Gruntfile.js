@@ -4,7 +4,7 @@ module.exports = (grunt) => {
       sass: {
         dist: {
           files: {
-            'interface/css/main.css': 'interface/css/scss/main.scss'
+            'css/main.css': 'css/scss/main.scss'
           }
         }
       },
@@ -12,9 +12,9 @@ module.exports = (grunt) => {
          dynamic: {
            files: [{
              expand: true,
-             cwd: 'interface/pre-img',
+             cwd: 'pre-img',
              src: ['images/*.{png,jpg,gif}'],
-             dest: 'interface/images'
+             dest: 'images'
            }]
          }
        },
@@ -25,14 +25,14 @@ module.exports = (grunt) => {
         },
         target: {
           files: {
-            'interface/css/main.min.css': ['interface/css/main.css']
+            'css/main.min.css': ['css/main.css']
           }
         }
       },
       uglify: {
         my_target: {
           files: {
-            'interface/js/scripts.min.js': ['interface/js/libs/*.js','interface/js/partials/*.js']
+            'js/scripts.min.js': ['js/libs/*.js','js/partials/*.js']
           }
         }
       },
@@ -45,7 +45,7 @@ module.exports = (grunt) => {
           },
         },
         scripts: {
-          files: ['interface/js/libs/*.js','interface/js/partials/*.js'],
+          files: ['js/libs/*.js','js/partials/*.js'],
           tasks: ['uglify'],
           options: {
             spawn: false,
