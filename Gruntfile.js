@@ -4,7 +4,7 @@ module.exports = () => {
       sass: {
         dist: {
           files: {
-            'hackathon-unirio/public/css/main.css': 'hackathon-unirio/public/css/scss/main.scss'
+            'interface/css/main.css': 'interface/css/scss/main.scss'
           }
         }
       },
@@ -12,9 +12,9 @@ module.exports = () => {
          dynamic: {
            files: [{
              expand: true,
-             cwd: 'hackathon-unirio/public/pre-img',
+             cwd: 'interface/pre-img',
              src: ['images/*.{png,jpg,gif}'],
-             dest: 'hackathon-unirio/public/images'
+             dest: 'interface/images'
            }]
          }
        },
@@ -25,14 +25,14 @@ module.exports = () => {
         },
         target: {
           files: {
-            'hackathon-unirio/public/css/main.min.css': ['hackathon-unirio/public/css/main.css']
+            'interface/css/main.min.css': ['interface/css/main.css']
           }
         }
       },
       uglify: {
         my_target: {
           files: {
-            'hackathon-unirio/public/js/scripts.min.js': ['hackathon-unirio/public/js/libs/*.js','hackathon-unirio/public/js/partials/*.js']
+            'interface/js/scripts.min.js': ['interface/js/libs/*.js','interface/js/partials/*.js']
           }
         }
       },
@@ -45,7 +45,7 @@ module.exports = () => {
           },
         },
         scripts: {
-          files: ['hackathon-unirio/public/js/libs/*.js','hackathon-unirio/public/js/partials/*.js'],
+          files: ['interface/js/libs/*.js','interface/js/partials/*.js'],
           tasks: ['uglify'],
           options: {
             spawn: false,
