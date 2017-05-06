@@ -17,6 +17,10 @@ Route::group(['middleware' => 'auth.jwt'], function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
+
+    Route::resource('curso','CursoController');
+    Route::resource('disciplina','DisciplinaController');
+    Route::resource('monitoria','MonitoriaController');
 });
 
 Route::post('/login', 'AuthController@login');
