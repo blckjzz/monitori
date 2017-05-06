@@ -1,10 +1,10 @@
-module.exports = () => {
+module.exports = (grunt) => {
 
   grunt.initConfig({
       sass: {
         dist: {
           files: {
-            'hackathon-unirio/public/css/main.css': 'hackathon-unirio/public/css/scss/main.scss'
+            'css/main.css': 'css/scss/main.scss'
           }
         }
       },
@@ -12,9 +12,9 @@ module.exports = () => {
          dynamic: {
            files: [{
              expand: true,
-             cwd: 'hackathon-unirio/public/pre-img',
+             cwd: 'pre-img',
              src: ['images/*.{png,jpg,gif}'],
-             dest: 'hackathon-unirio/public/images'
+             dest: 'images'
            }]
          }
        },
@@ -25,14 +25,14 @@ module.exports = () => {
         },
         target: {
           files: {
-            'hackathon-unirio/public/css/main.min.css': ['hackathon-unirio/public/css/main.css']
+            'css/main.min.css': ['css/main.css']
           }
         }
       },
       uglify: {
         my_target: {
           files: {
-            'hackathon-unirio/public/js/scripts.min.js': ['hackathon-unirio/public/js/libs/*.js','hackathon-unirio/public/js/partials/*.js']
+            'js/scripts.min.js': ['js/libs/*.js','js/partials/*.js']
           }
         }
       },
@@ -45,7 +45,7 @@ module.exports = () => {
           },
         },
         scripts: {
-          files: ['hackathon-unirio/public/js/libs/*.js','hackathon-unirio/public/js/partials/*.js'],
+          files: ['js/libs/*.js','js/partials/*.js'],
           tasks: ['uglify'],
           options: {
             spawn: false,
