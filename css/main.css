@@ -8185,6 +8185,7 @@ button.close {
   position: absolute;
   left: 0;
   top: 0;
+  min-width: 100%;
   width: auto;
   height: 100%;
   opacity: 0.4;
@@ -8198,5 +8199,9 @@ button.close {
   transform: scale(1.1);
   /* Standard syntax */
   transition: .5s; }
+
+@media screen and (max-width: 550px) {
+  .flex-responsive-col {
+    height: 50vh !important; } }
 
 /*# sourceMappingURL=main.css.map */
