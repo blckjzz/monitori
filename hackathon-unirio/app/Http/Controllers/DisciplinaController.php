@@ -35,7 +35,8 @@ class DisciplinaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Disciplina::create($request->all());
+        return response()->json(['success' => 'Criado'])->getStatusCode(201);
     }
 
     /**
@@ -46,7 +47,11 @@ class DisciplinaController extends Controller
      */
     public function show($id)
     {
-        //
+        $disciplina = Disciplina::find($id);
+        if($disciplina == null){
+            return response()->setStatusCode(404);
+        }
+        return response()->json($disciplina);
     }
 
     /**
@@ -69,7 +74,8 @@ class DisciplinaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return response()->setStatusCode(501);
+
     }
 
     /**
@@ -80,6 +86,7 @@ class DisciplinaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return response()->setStatusCode(501);
+
     }
 }
