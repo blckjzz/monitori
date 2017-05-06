@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Disciplina;
+use Illuminate\Support\Facades\Auth;
+
 class DisciplinaController extends Controller
 {
     /**
@@ -11,10 +13,15 @@ class DisciplinaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $disciplinas = Disciplina::all();
-        return response()->json($disciplinas);
+        $query = Disciplina::query();
+
+        if ($request->has('limit')) {
+            $query->take('limit');
+        }
+
+        return response()->json($query->get());
     }
 
     /**
@@ -22,9 +29,10 @@ class DisciplinaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        # API... Não existem formulários!
+        return response()->setStatusCode(501);
     }
 
     /**
@@ -36,7 +44,7 @@ class DisciplinaController extends Controller
     public function store(Request $request)
     {
         Disciplina::create($request->all());
-        return response()->json(['success' => 'Criado'])->getStatusCode(201);
+        return response()->json(['success' => 'Disciplina criada com sucesso'])->getStatusCode(201);
     }
 
     /**
@@ -47,11 +55,7 @@ class DisciplinaController extends Controller
      */
     public function show($id)
     {
-        $disciplina = Disciplina::find($id);
-        if($disciplina == null){
-            return response()->setStatusCode(404);
-        }
-        return response()->json($disciplina);
+        return response()->json(Disciplina::find($id));
     }
 
     /**
@@ -62,6 +66,7 @@ class DisciplinaController extends Controller
      */
     public function edit($id)
     {
+        # API... Não existem formulários!
         return response()->setStatusCode(501);
     }
 
@@ -74,8 +79,10 @@ class DisciplinaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return response()->setStatusCode(501);
-
+        $disciplina = Disciplina::findOrFail($id);
+        $disciplina->fill($request->all());
+        $disciplina->save();
+        return response()->json(['success' => 'Disciplina atualizada com sucesso!'], 200);
     }
 
     /**
@@ -86,7 +93,24 @@ class DisciplinaController extends Controller
      */
     public function destroy($id)
     {
-        return response()->setStatusCode(501);
+        Disciplina::destroy($id);
+        return response()->json(['success' => 'Disciplina deletada com sucesso'])->setStatusCode(200);
+    }
+    
+    public function teach($id)
+    {
+        /** @var \App\User $user */
+        $user = Auth::user();
+        $user->ensinadas()->attach($id);
+        return response()->json(['success' => 'Você está disponivel para dar aula desta disciplina'])->setStatusCode(200);
+    }
 
+
+    public function unteach($id)
+    {
+        /** @var \App\User $user */
+        $user = Auth::user();
+        $user->ensinadas()->detach($id);
+        return response()->json(['success' => 'Você não está mais disponivel para dar aula desta disciplina'])->setStatusCode(200);
     }
 }
