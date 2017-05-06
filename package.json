@@ -1,0 +1,33 @@
+{
+  "name": "monitori",
+  "version": "1.0.0",
+  "description": "Rede de conhecimentos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/se3k/hackathon-unirio.git"
+  },
+  "keywords": [
+    "Monitoria",
+    "Rede",
+    "Conhecimento",
+    "Aluno"
+  ],
+  "author": "Diego Cerqueira, Igor Felipe, João Gabriel, João Paulo, João Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/se3k/hackathon-unirio/issues"
+  },
+  "homepage": "https://github.com/se3k/hackathon-unirio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
