@@ -1,0 +1,31 @@
+PÁGINAS
+
+login
+	Aluno preenche usuario e senha
+
+menu
+	home
+	painel-monitor
+	sair
+	
+home
+	dualidade "Oferecer monitoria" e "Buscar monitoria"
+
+buscar-monitoria
+	Usuario filtra por curso e disciplina e escolhe monitoria disponivel
+
+oferecer-monitoria
+	Usuario filtra curso e escolhe disciplina
+
+painel-monitor
+	solicitações
+	disciplinas oferecidas
+	
+	
+	
+
+	
+
+
+
+
