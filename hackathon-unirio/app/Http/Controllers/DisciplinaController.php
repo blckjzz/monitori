@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Disciplina;
 class DisciplinaController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class DisciplinaController extends Controller
      */
     public function index()
     {
-        //
+        $disciplinas = Disciplina::all();
+        return response()->json($disciplinas);
     }
 
     /**
