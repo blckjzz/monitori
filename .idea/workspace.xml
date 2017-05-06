@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80170380-eef4-45db-9142-506109d43a3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/hackathon-unirio.iml" afterPath="$PROJECT_DIR$/.idea/hackathon-unirio.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/app/Curso.php" afterPath="$PROJECT_DIR$/hackathon-unirio/app/Curso.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/app/Disciplina.php" afterPath="$PROJECT_DIR$/hackathon-unirio/app/Disciplina.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/CursoController.php" afterPath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/CursoController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/DisciplinaController.php" afterPath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/DisciplinaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/app/Monitoria.php" afterPath="$PROJECT_DIR$/hackathon-unirio/app/Monitoria.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/routes/api.php" afterPath="$PROJECT_DIR$/hackathon-unirio/routes/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/MonitoriaController.php" afterPath="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/MonitoriaController.php" />
     </list>
     <ignored path="hackathon-unirio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,9 +29,21 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackathon-unirio/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="162">
               <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CursoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/CursoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="15" column="29" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +51,8 @@
       <file leaf-file-name="DisciplinaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/DisciplinaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+            <state relative-caret-position="126">
+              <caret line="52" column="9" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="9" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -53,44 +60,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Disciplina.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Disciplina.php">
+      <file leaf-file-name="MonitoriaController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/MonitoriaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Monitoria.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Monitoria.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="26" column="10" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="261">
+              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
               <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
+                <element signature="e#40#85#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoftDeletes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hackathon-unirio/vendor/laravel/framework/src/Illuminate/Database/Eloquent/SoftDeletes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-231">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,13 +110,14 @@
         <option value="$PROJECT_DIR$/laravel-api/app/User.php" />
         <option value="$PROJECT_DIR$/laravel-api/routes/api.php" />
         <option value="$PROJECT_DIR$/laravel-api/app/Http/Controllers/CommentController.php" />
-        <option value="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/CursoController.php" />
         <option value="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/hackathon-unirio/routes/api.php" />
         <option value="$PROJECT_DIR$/hackathon-unirio/app/Curso.php" />
-        <option value="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/DisciplinaController.php" />
         <option value="$PROJECT_DIR$/hackathon-unirio/app/Disciplina.php" />
         <option value="$PROJECT_DIR$/hackathon-unirio/app/Monitoria.php" />
+        <option value="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/DisciplinaController.php" />
+        <option value="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/CursoController.php" />
+        <option value="$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/MonitoriaController.php" />
       </list>
     </option>
   </component>
@@ -364,12 +352,12 @@
       <updated>1493858916699</updated>
       <workItem from="1493858917861" duration="4812000" />
       <workItem from="1493944009498" duration="8925000" />
-      <workItem from="1494104874154" duration="1229000" />
+      <workItem from="1494104874154" duration="2972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14966000" />
+    <option name="totallyTimeSpent" value="16709000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,9 +376,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31458968" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.331307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -398,7 +387,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -419,8 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel-api/routes/api.php" />
-    <entry file="file://$PROJECT_DIR$/angular-laravel/src/index.html" />
     <entry file="file://$PROJECT_DIR$/front-angular/src/index.html" />
     <entry file="file://$PROJECT_DIR$/front-angular/node_modules/@angular/forms/src/model.d.ts" />
     <entry file="file://$PROJECT_DIR$/hack/database/seeds/CommendTableSeeder.php" />
@@ -470,37 +456,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/CursoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-601">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hackathon-unirio/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/DisciplinaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Disciplina.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="63">
           <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding />
         </state>
@@ -508,7 +466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Monitoria.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="-18">
           <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding />
         </state>
@@ -516,7 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-333">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -528,6 +486,52 @@
           <caret line="26" column="10" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="10" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon-unirio/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/CursoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/DisciplinaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="52" column="9" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon-unirio/vendor/laravel/framework/src/Illuminate/Database/Eloquent/SoftDeletes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon-unirio/app/Http/Controllers/MonitoriaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <folding>
+            <element signature="e#40#85#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

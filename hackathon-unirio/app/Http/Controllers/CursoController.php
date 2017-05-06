@@ -47,6 +47,9 @@ class CursoController extends Controller
     public function show($id)
     {
         $curso = Curso::find($id);
+        if(curso == null){
+
+        }
         return response()->json($curso);
     }
 
