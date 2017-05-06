@@ -5,7 +5,7 @@ login
 
 menu
 	home
-	painel-monitor
+	painel monitor
 	sair
 	
 home
