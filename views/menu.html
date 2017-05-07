@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="MenuController">
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-if="location.path() != '/'">
     <div class="container">
         <div class="navbar-header">
             <a href="#home" class="navbar-brand">Monitori</a>
@@ -12,7 +12,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav nav navbar-right">
-                <li><a href="#">{{teste}}</a></li>
+                <li><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
             </ul>
         </div>
