@@ -16,9 +16,10 @@
 <script src="js/angular-route.min.js"></script>
 <script src="js/app.js"></script>
 <script src="js/scripts.min.js"></script>
-<script src="js/auth-interceptor.js"></script>
 <script src="js/controllers/login-controller.js"></script>
 <script src="js/controllers/home-controller.js"></script>
 <script src="js/controllers/menu-controller.js"></script>
+<script src="js/controllers/meu-painel.js"></script>
+<script src="js/controllers/oferecer-monitoria.js"></script>
 </body>
 </html>

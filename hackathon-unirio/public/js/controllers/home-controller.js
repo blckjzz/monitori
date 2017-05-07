@@ -1,18 +1,22 @@
 app.controller('HomeController', function($scope, $http) {
   var token = localStorage.getItem('Authorization');
+  $scope.error = false;
   $http({
     method: 'GET',
-    url: 'http://localhost:8000/api/user/auth',
+    url: '/api/user/auth',
     headers: {
       'Authorization': 'Bearer ' + token
     }
   }).then(
-    function(data){
-      console.log(data);
+    function(response){
+      localStorage.setItem('aluno', JSON.stringify(response.data));
+      var aluno = localStorage.getItem('aluno');
+      var aluno = JSON.parse(aluno);
+      console.log(aluno);
     },
-    function(error){
-      if(error.status == 401){
-        console.log('Login Inválido');
+    function(err){
+      if(err.status == 401){
+        $scope.error = true;
       }
     }
   );

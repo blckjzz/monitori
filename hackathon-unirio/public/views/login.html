@@ -11,4 +11,8 @@
     </div>
     <input type="button" class="btn btn-lg btn-warning pull-right" ng-click="logIn()" value="Enviar">
   </form>
+  <div ng-show="error" class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Oops!</strong> Matrícula ou senha inválidos. Tente Novamente
+  </div>
 </div>
