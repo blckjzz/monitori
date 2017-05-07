@@ -108,9 +108,23 @@ class MonitoriaController extends Controller
     public function showMonitorias()
     {
         $id = Auth::user()->getAuthIdentifier();
-        $respose = Monitoria::where('monitor_id',$id)->get();
+        //adicionar clausula para mostrar apenas que não foram
+        // finalizadas ou tratar isso na view de acordo com o param
+        $respose = Monitoria::where('monitor_id', $id)->get();
         return response()->json($respose);
     }
 
+
+    /**
+     * Aluno solicita uma monitoria de um monitor "oculto"
+     * @param $idDisciplina
+     */
+    public function solicitarMonitoria(Request $request){
+
+        //puxar alguém com interesse em uma disciplina que foi passada no request
+        Monitoria::create($request->all());
+
+        return response()->json($request->all());
+    }
 
 }

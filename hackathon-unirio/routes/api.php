@@ -18,8 +18,10 @@ Route::group(['middleware' => 'cors'], function () {
     Route::group(['middleware' => 'jwt.auth'], function () {
         Route::get('user/auth', 'UserController@showAuthUser');
         Route::resource('user', 'UserController');
+        Route::get('curso/{curso}/disciplinas','CursoController@showDisciplinasCurso');
         Route::resource('curso', 'CursoController');
         Route::resource('disciplina', 'DisciplinaController');
+        Route::post('mentoria/solicitar','MonitoriaController@solicitarMonitoria');
         Route::get('mentoria/listar','MonitoriaController@showMonitorias');
         Route::resource('monitoria', 'MonitoriaController');
         Route::post('/disciplina/{id}/teach', 'DisciplinaController@teach');

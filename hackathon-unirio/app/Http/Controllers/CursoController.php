@@ -92,4 +92,10 @@ class CursoController extends Controller
         Curso::destroy($id);
         return response()->json(['success' => 'Curso com sucesso'])->getStatusCode(201);
     }
+
+    public function showDisciplinasCurso($id){
+        $curso = Curso::find($id);
+        return response()->json($curso->disciplinas);
+
+    }
 }
