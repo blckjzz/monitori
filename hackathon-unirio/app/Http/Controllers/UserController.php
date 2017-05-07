@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller
 {
     /**
@@ -93,5 +95,13 @@ class UserController extends Controller
     {
         User::destroy($id);
         return response()->json(['success' => 'Usuário deletado com sucesso!'], 200);
+    }
+
+    /**
+     * Returna informações do usuário auteticado
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function showAuthUser(){
+        return response()->json(Auth::user());
     }
 }
