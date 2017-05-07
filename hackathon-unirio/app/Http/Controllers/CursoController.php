@@ -35,6 +35,10 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'nome' => 'required',
+            'codigo' => 'required',
+        ]);
         Curso::create($request->all());
         return response()->json(['success' => 'Criado'])->getStatusCode(201);
     }

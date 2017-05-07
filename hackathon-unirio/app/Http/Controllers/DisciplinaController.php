@@ -43,6 +43,10 @@ class DisciplinaController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'codigo' => 'required',
+            'nome' => 'required',
+        ]);
         Disciplina::create($request->all());
         return response()->json(['success' => 'Disciplina criada com sucesso'])->getStatusCode(201);
     }
@@ -96,7 +100,7 @@ class DisciplinaController extends Controller
         Disciplina::destroy($id);
         return response()->json(['success' => 'Disciplina deletada com sucesso'])->setStatusCode(200);
     }
-    
+
     public function teach($id)
     {
         /** @var \App\User $user */
