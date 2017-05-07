@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80170380-eef4-45db-9142-506109d43a3c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelo.jpg" afterPath="$PROJECT_DIR$/modelo.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelo.jpg.bak" afterPath="$PROJECT_DIR$/modelo.jpg.bak" />
     </list>
     <ignored path="hackathon-unirio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -343,7 +343,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61456000" />
+    <option name="totallyTimeSpent" value="61711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
