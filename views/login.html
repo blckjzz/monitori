@@ -3,12 +3,12 @@
   <form class="form-login col-xs-12 col-md-6">
     <div class="form-group">
       <label for="exampleInputEmail1">Matrícula</label>
-      <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Matrícula">
+      <input type="text" class="form-control input-lg" id="exampleInputEmail1" ng-model="matricula" name="matricula" placeholder="Matrícula">
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Senha</label>
-      <input type="password" class="form-control input-lg" id="exampleInputEmail1" placeholder="Senha">
+      <input type="password" class="form-control input-lg" id="exampleInputEmail1" ng-model="password" name="password" placeholder="Senha">
     </div>
-    <input type="submit" class="btn btn-lg btn-warning pull-right">
+    <input type="button" class="btn btn-lg btn-warning pull-right" ng-click="logIn()" value="Enviar">
   </form>
 </div>
