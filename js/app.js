@@ -10,6 +10,8 @@ var app = angular.module('monitori', ['ngRoute'])
       templateUrl: 'views/buscar-monitoria.html'
   }).when('/ensinar', {
       templateUrl: 'views/oferecer-monitoria.html'
+  }).when('/meu-painel', {
+      templateUrl: 'views/meu-painel.html'
   });
   $locationProvider.hashPrefix('');
 });
