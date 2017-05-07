@@ -23,6 +23,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
         'email' => $faker->unique()->safeEmail,
         'telefone' => $faker->phoneNumber,
-        'uni_coin' => $faker->randomNumber(3)
+        'uni_coin' => $faker->randomNumber(3),
+        'curso_id' => 1,
     ];
 });

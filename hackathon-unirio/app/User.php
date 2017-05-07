@@ -22,6 +22,7 @@ class User extends Authenticatable
         'nome_social',
         'email',
         'telefone',
+        'curso_id',
     ];
 
     /**
@@ -46,5 +47,10 @@ class User extends Authenticatable
     public function monitoriasAluno()
     {
         return $this->hasMany(User::class, 'monitorado_id');
+    }
+
+    public function curso()
+    {
+        return $this->hasOne(Curso::class);
     }
 }

@@ -16,6 +16,7 @@ class UserSeeder extends Seeder
             'matricula' => '530629700',
             'nome' => 'Diego Cerqueira',
             'email' => 'diego@unigranrio.com',
+            'curso_id' => 1,
         ])->save();
     }
 }
