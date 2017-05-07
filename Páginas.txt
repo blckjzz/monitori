@@ -12,7 +12,7 @@ home
 	dualidade "Oferecer monitoria" e "Buscar monitoria"
 
 buscar-monitoria
-	Usuario filtra por curso e disciplina e escolhe monitoria disponivel
+	Usuario filtra por curso e seleciona disciplina para a qual deseja ser monitorado(criar uma nova monitoria)
 
 oferecer-monitoria
 	Usuario filtra curso e escolhe disciplina
