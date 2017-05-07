@@ -24,6 +24,5 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
         'telefone' => $faker->phoneNumber,
         'uni_coin' => $faker->randomNumber(3),
-        'curso_id' => 1,
     ];
 });
