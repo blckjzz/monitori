@@ -9,9 +9,11 @@ var app = angular.module('monitori', ['ngRoute'])
   }).when('/aprender', {
       templateUrl: 'views/buscar-monitoria.html'
   }).when('/ensinar', {
-      templateUrl: 'views/oferecer-monitoria.html'
+      templateUrl: 'views/oferecer-monitoria.html',
+      controller: 'OferecerMonitoriaController'
   }).when('/meu-painel', {
-      templateUrl: 'views/meu-painel.html'
+      templateUrl: 'views/meu-painel.html',
+      controller: 'MeuPainelController'
   });
   $locationProvider.html5Mode(true);
 });
