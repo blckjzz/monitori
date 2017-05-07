@@ -1,0 +1,26 @@
+#login{
+  background-image: url('../images/bg-login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flex-wrapper{
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+.flex-wrapper > h1 {
+  font-size: 5em;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px #fff;
+}
+.flex-wrapper > h1:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  height: 1px;
+  width: inherit;
+  border-bottom: 4px solid #f0ad4e;
+}
