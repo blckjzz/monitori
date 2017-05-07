@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 use App\Monitoria;
+use Illuminate\Support\Facades\Auth;
 
 class MonitoriaController extends Controller
 {
@@ -99,4 +100,17 @@ class MonitoriaController extends Controller
         $monitoria->delete();
         return response()->json(['success' => 'Removido com sucesso'])->getStatusCode(201);
     }
+
+    /**
+     * Retornas as mentorias relacionadas ao usuário logado
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function showMonitorias()
+    {
+        $id = Auth::user()->getAuthIdentifier();
+        $respose = Monitoria::where('monitor_id',$id)->get();
+        return response()->json($respose);
+    }
+
+
 }

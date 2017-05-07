@@ -20,6 +20,7 @@ Route::group(['middleware' => 'cors'], function () {
         Route::resource('user', 'UserController');
         Route::resource('curso', 'CursoController');
         Route::resource('disciplina', 'DisciplinaController');
+        Route::get('mentoria/listar','MonitoriaController@showMonitorias');
         Route::resource('monitoria', 'MonitoriaController');
         Route::post('/disciplina/{id}/teach', 'DisciplinaController@teach');
         Route::post('/disciplina/{id}/unteach', 'DisciplinaController@unteach');
