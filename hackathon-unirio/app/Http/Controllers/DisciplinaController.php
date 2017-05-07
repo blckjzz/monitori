@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Disciplina;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DisciplinaController extends Controller
 {
@@ -120,5 +121,11 @@ class DisciplinaController extends Controller
         $user = Auth::user();
         $user->ensinadas()->detach($id);
         return response()->json(['success' => 'Você não está mais disponivel para dar aula desta disciplina'])->setStatusCode(200);
+    }
+
+    public function toggleTeach($id)
+    {
+        $user = Auth::user();
+        $user->ensinadas()->toggle($id);
     }
 }

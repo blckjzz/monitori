@@ -28,6 +28,7 @@ Route::group(['middleware' => 'cors'], function () {
         Route::resource('monitoria', 'MonitoriaController');
         Route::post('/disciplina/{id}/teach', 'DisciplinaController@teach');
         Route::post('/disciplina/{id}/unteach', 'DisciplinaController@unteach');
+        Route::post('/disciplina/{id}/toggle', 'DisciplinaController@toggleTeach');
     });
 
     Route::post('/login', 'AuthController@login');

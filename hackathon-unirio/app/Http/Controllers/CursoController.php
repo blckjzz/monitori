@@ -94,6 +94,11 @@ class CursoController extends Controller
         return response()->json(['success' => 'Curso com sucesso'])->getStatusCode(201);
     }
 
+    /**
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function showDisciplinasCurso(Request $request, $id){
         $query = Disciplina::whereHas('cursos', function ($query) use ($id) {
             return $query->whereId($id);
