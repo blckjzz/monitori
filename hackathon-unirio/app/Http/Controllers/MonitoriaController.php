@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 use App\Monitoria;
@@ -98,7 +99,7 @@ class MonitoriaController extends Controller
     {
         $monitoria = Monitoria::find($id);
         $monitoria->delete();
-        return response()->json(['success' => 'Removido com sucesso'])->getStatusCode(201);
+        return response()->json(['success' => 'Removido com sucesso'])->getStatusCode(200);
     }
 
     /**
@@ -114,17 +115,26 @@ class MonitoriaController extends Controller
         return response()->json($respose);
     }
 
-
     /**
      * Aluno solicita uma monitoria de um monitor "oculto"
      * @param $idDisciplina
      */
-    public function solicitarMonitoria(Request $request){
+    public function solicitarMonitoria(Request $request)
+    {
+        $users = User::whereHas('ensinadas', function ($query) use ($request) {
+            $query->whereId($request->id);
+        })->where('id', '!=', Auth::user()->id)->get();
 
-        //puxar alguém com interesse em uma disciplina que foi passada no request
-        Monitoria::create($request->all());
+        if (!$users->count()) {
+            return response()->json(['fail' => 'Nenhum usuário está ensinando esta disciplina.'], 404);
+        }
 
-        return response()->json($request->all());
+        $monitoria = new Monitoria();
+        $monitoria->monitor_id = $users->random()->id;
+        $monitoria->monitorado_id = Auth::user()->id;
+        $monitoria->disciplina_id = $request->id;
+        $monitoria->save();
+        return response()-json(['success' => 'Pedido de monitoria enviado'], 200);
     }
 
 }

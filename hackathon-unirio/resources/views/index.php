@@ -19,5 +19,8 @@
 <script src="js/controllers/login-controller.js"></script>
 <script src="js/controllers/home-controller.js"></script>
 <script src="js/controllers/menu-controller.js"></script>
+<script src="js/controllers/meu-painel.js"></script>
+<script src="js/controllers/oferecer-monitoria.js"></script>
+<script src="js/controllers/buscar-monitoria.js"></script>
 </body>
 </html>

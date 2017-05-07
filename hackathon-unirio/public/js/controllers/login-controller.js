@@ -6,15 +6,16 @@ app.controller('LoginController', function($scope, $location, $http, $window) {
         matricula: $scope.matricula,
         password: $scope.password
       };
-      $http.get('http://127.0.0.1:8000/api/login?matricula='+data.matricula+'&password='+data.password, {noAuth : true}).then(
+      $http.post('/api/login', data).then(
         function(data){
           localStorage.setItem("Authorization", data.data.token);
           var token = localStorage.getItem("Authorization");
-           $window.location.href = '#/home';
+          console.log(token);
+          $window.location.href = '#/home';
         },
         function(error){
           if(error.status == 401){
-            console.log('Login Inválido');
+            $scope.error = true;
           }
         }
       );

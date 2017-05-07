@@ -104,4 +104,13 @@ class UserController extends Controller
     public function showAuthUser(){
         return response()->json(Auth::user());
     }
+
+    /**
+     * retorna disciplinas que o aluno se dispos a ensinar
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function showDisciplinasOfertadas()
+    {
+        return response()->json(Auth::user()->load('ensinadas')->ensinadas);
+    }
 }

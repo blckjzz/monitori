@@ -7,11 +7,14 @@ var app = angular.module('monitori', ['ngRoute'])
       templateUrl: 'views/home.html',
       controller: 'HomeController'
   }).when('/aprender', {
-      templateUrl: 'views/buscar-monitoria.html'
+      templateUrl: 'views/buscar-monitoria.html',
+      controller: 'BuscarMonitoriaController'
   }).when('/ensinar', {
-      templateUrl: 'views/oferecer-monitoria.html'
+      templateUrl: 'views/oferecer-monitoria.html',
+      controller: 'OferecerMonitoriaController'
   }).when('/meu-painel', {
-      templateUrl: 'views/meu-painel.html'
+      templateUrl: 'views/meu-painel.html',
+      controller: 'MeuPainelController'
   });
-  $locationProvider.html5Mode(true);
+  $locationProvider.hashPrefix('');
 });
