@@ -10,7 +10,7 @@
   <title>Monitori - Rede de Monitoria</title>
 </head>
 <body>
-  <div ng-include src="'views/menu.html'"></div>
+  <div ng-include src="'views/menu.html'" ng-if="path != '/'"></div>
   <div ng-view></div>
 <script src="js/angular.min.js"></script>
 <script src="js/angular-route.min.js"></script>

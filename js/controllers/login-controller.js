@@ -1,3 +1,3 @@
-app.controller('LoginController',['$scope', function($scope) {
-    $scope.teste = "teste";
+app.controller('LoginController',['$scope', '$location', function($scope, $location) {
+    
 }]);
