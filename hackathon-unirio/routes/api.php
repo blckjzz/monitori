@@ -17,8 +17,10 @@ use Illuminate\Http\Request;
 Route::group(['middleware' => 'cors'], function () {
     Route::group(['middleware' => 'jwt.auth'], function () {
         Route::get('user/auth', 'UserController@showAuthUser');
+        Route::get('user/auth/ofertadas','UserController@showDisciplinasOfertadas');
         Route::resource('user', 'UserController');
         Route::get('curso/{curso}/disciplinas','CursoController@showDisciplinasCurso');
+
         Route::resource('curso', 'CursoController');
         Route::resource('disciplina', 'DisciplinaController');
         Route::post('mentoria/solicitar','MonitoriaController@solicitarMonitoria');
