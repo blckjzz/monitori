@@ -32,4 +32,19 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function ensinadas()
+    {
+        return $this->belongsToMany(Disciplina::class, 'mo_user_disciplina');
+    }
+
+    public function monitoriasMonitor()
+    {
+        return $this->hasMany(User::class, 'monitor_id');
+    }
+
+    public function monitoriasAluno()
+    {
+        return $this->hasMany(User::class, 'monitorado_id');
+    }
 }

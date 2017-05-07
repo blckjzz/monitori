@@ -15,10 +15,15 @@ class MonitoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $monitorias = Monitoria::all();
-        return response()->json($monitorias);
+        $query = Monitoria::query();
+
+        if ($request->has('limit')) {
+            $query->take($query->limit);
+        }
+
+        return response()->json($query->get());
     }
 
     /**
@@ -28,6 +33,7 @@ class MonitoriaController extends Controller
      */
     public function create()
     {
+        # API... Não existem formulários!
         return response()->setStatusCode(501);
     }
 
@@ -40,7 +46,7 @@ class MonitoriaController extends Controller
     public function store(Request $request)
     {
         Monitoria::create($request->all());
-        return response()->json(['success' => 'Criado'])->getStatusCode(201);
+        return response()->json(['success' => 'Monitoria criada com sucesso'])->getStatusCode(201);
     }
 
     /**
@@ -51,11 +57,7 @@ class MonitoriaController extends Controller
      */
     public function show($id)
     {
-        $monitoria = Monitoria::find($id);
-        if ($monitoria == null) {
-            return response()->setStatusCode(404);
-        }
-        return response()->json($monitoria);
+        return response()->json(Monitoria::find($id));
     }
 
     /**
@@ -66,6 +68,7 @@ class MonitoriaController extends Controller
      */
     public function edit($id)
     {
+        # API... Não existem formulários!
         return response()->setStatusCode(501);
     }
 
@@ -79,12 +82,9 @@ class MonitoriaController extends Controller
     public function update(Request $request, $id)
     {
         $monitoria = Monitoria::findOrFail($id);
-        if ($monitoria == null) {
-            return response()->setStatusCode(404);
-        }
         $monitoria->fill($request->all());
         $monitoria->save();
-
+        return response()->json(['success' => 'Monitoria atualizada com sucesso!'], 200);
     }
 
     /**

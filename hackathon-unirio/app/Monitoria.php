@@ -25,11 +25,11 @@ class Monitoria extends Model
 
     public function monitor()
     {
-        return $this->hasMany(User::class, 'monitor_id');
+        return $this->belongsTo(User::class, 'monitor_id');
     }
 
     public function monitorado()
     {
-        return $this->hasMany(User::class, 'monitorado_id');
+        return $this->belongsTo(User::class, 'monitorado_id');
     }
 }

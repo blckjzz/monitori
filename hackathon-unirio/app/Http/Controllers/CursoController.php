@@ -47,11 +47,7 @@ class CursoController extends Controller
      */
     public function show($id)
     {
-        $curso = Curso::find($id);
-        if (curso == null) {
-
-        }
-        return response()->json($curso);
+        return response()->json(Curso::find($id));
     }
 
     /**
@@ -62,6 +58,7 @@ class CursoController extends Controller
      */
     public function edit($id)
     {
+        # API... Não existem formulários!
         return response()->setStatusCode(501);
     }
 
@@ -74,7 +71,10 @@ class CursoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return response()->setStatusCode(501);
+        $curso = Curso::findOrFail($id);
+        $curso->fill($request->all());
+        $curso->save();
+        return response()->json(['success' => 'Curso atualizado com sucesso!'], 200);
     }
 
     /**
@@ -85,6 +85,7 @@ class CursoController extends Controller
      */
     public function destroy($id)
     {
-        return response()->setStatusCode(501);
+        Curso::destroy($id);
+        return response()->json(['success' => 'Curso com sucesso'])->getStatusCode(201);
     }
 }

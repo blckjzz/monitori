@@ -11,10 +11,15 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::all();
-        return response()->json($users);
+        $query = User::query();
+
+        if ($request->has('limit')) {
+            $query->take($request->limit);
+        }
+
+        return response()->json($query->get());
     }
 
     /**
@@ -22,9 +27,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        # API... Não existem formulários!
+        return response()->setStatusCode(501);
     }
 
     /**
@@ -35,7 +41,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create($request->all());
+        return response()->json(['success' => 'Usuário criado com sucesso!'], 200);
     }
 
     /**
@@ -46,7 +53,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return response()->json(User::find($id));
     }
 
     /**
@@ -57,6 +64,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
+        # API... Não existem formulários!
         return response()->setStatusCode(501);
     }
 
@@ -69,7 +77,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->fill($request->all());
+        $user->save();
+        return response()->json(['success' => 'Usuário atualizado com sucesso!'], 200);
     }
 
     /**
@@ -80,6 +91,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::destroy($id);
+        return response()->json(['success' => 'Usuário deletado com sucesso!'], 200);
     }
 }
