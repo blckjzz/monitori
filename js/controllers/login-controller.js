@@ -6,7 +6,7 @@ app.controller('LoginController', function($scope, $location, $http, $window) {
         matricula: $scope.matricula,
         password: $scope.password
       };
-      $http.get('http://127.0.0.1:8000/api/login?matricula='+data.matricula+'&password='+data.password).then(
+      $http.get('http://127.0.0.1:8000/api/login?matricula='+data.matricula+'&password='+data.password, {noAuth : true}).then(
         function(data){
           localStorage.setItem("Authorization", data.data.token);
           var token = localStorage.getItem("Authorization");
