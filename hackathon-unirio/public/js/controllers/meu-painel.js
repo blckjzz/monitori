@@ -8,10 +8,22 @@ app.controller('MeuPainelController', function($scope, $http) {
       'Authorization': 'Bearer ' + token
     }
   }).then(
-    function(response){
-      console.log(response);
-      if(response.data.length === 0){
-        $scope.alert = true;
+    function(data){
+      if(data){
+        console.log('entrou');
+        var solicitacao = data.data[0];
+        solicitacao.aceita = null;
+        $scope.solicitacao = solicitacao;
+        console.log(solicitacao);
+        /*  'aceita',
+            'finalizada',
+            'nota',
+            'avaliacao',
+            'monitor_id',
+            'monitorado_id',
+            'disciplina_id',
+          */
+
       }else{
         $scope.monitorias = true;
       }

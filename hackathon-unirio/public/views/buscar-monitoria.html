@@ -7,13 +7,11 @@
 <section class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h2 class="page-subtitle">O que você aprender?</h2>
+      <h2 class="page-subtitle">O que você deseja aprender?</h2>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <span ng-show="erro" class="alert alert-error">Não foi possível</span>
-    </div>
+  <div ng-show="sucesso" class="alert alert-success" role="alert">
+    <strong>Pronto!</strong> Sua solicitação foi enviada e estamos procurando um monitor para você.
   </div>
   <div class="col-sm-6 col-md-4" ng-repeat="disciplina in disciplinas">
     <div class="thumbnail">

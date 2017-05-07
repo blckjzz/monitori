@@ -106,13 +106,16 @@ class MonitoriaController extends Controller
      * Retornas as mentorias relacionadas ao usuário logado
      * @return \Illuminate\Http\JsonResponse
      */
-    public function showMonitorias()
+    public function showMonitorias(Request $request)
     {
         $id = Auth::user()->getAuthIdentifier();
-        //adicionar clausula para mostrar apenas que não foram
-        // finalizadas ou tratar isso na view de acordo com o param
-        $respose = Monitoria::where('monitor_id', $id)->get();
-        return response()->json($respose);
+        $query = Monitoria::with(['monitor', 'disciplina'])->where('monitor_id', $id);
+
+        if ($request->novas) {
+            $query->whereAceita(null);
+        }
+
+        return response()->json($query->get());
     }
 
     /**

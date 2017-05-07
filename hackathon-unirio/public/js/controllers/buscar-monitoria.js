@@ -39,10 +39,13 @@ app.controller('BuscarMonitoriaController', function($scope, $http) {
     })
     .then(
       function(data){
-        
+        $scope.erro = false;
+        $scope.sucesso = true;
         console.log(data);
       },
       function(err){
+        $scope.sucesso = false;
+        $scope.erro = true;
         console.log(err);
       }
     );

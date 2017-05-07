@@ -18,5 +18,12 @@ class UserSeeder extends Seeder
             'email' => 'diego@unigranrio.com',
             'curso_id' => 1,
         ])->save();
+
+        factory(\App\User::class)->make([
+            'matricula' => '530629800',
+            'nome' => 'João',
+            'email' => 'joao@unirio.com',
+            'curso_id' => 2,
+        ])->save();
     }
 }

@@ -58,7 +58,7 @@ function atualizaDisciplinas(){
   $scope.teach = function(id){
     $http({
       method: 'POST',
-      url:'/api/disciplina/'+id+'/teach',
+      url:'/api/disciplina/'+id+'/toggle',
       headers: {
         'Authorization': 'Bearer ' + token
       }
@@ -75,7 +75,7 @@ function atualizaDisciplinas(){
   $scope.unteach = function(id){
     $http({
       method: 'POST',
-      url:'/api/disciplina/'+id+'/unteach',
+      url:'/api/disciplina/'+id+'/toggle',
       headers: {
         'Authorization': 'Bearer ' + token
       }
