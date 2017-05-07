@@ -6,8 +6,10 @@ var app = angular.module('monitori', ['ngRoute'])
   }).when('/home', {
       templateUrl: 'views/home.html',
       controller: 'HomeController'
-  }).when('/buscar-monitoria', {
+  }).when('/aprender', {
       templateUrl: 'views/buscar-monitoria.html'
+  }).when('/ensinar', {
+      templateUrl: 'views/oferecer-monitoria.html'
   });
   $locationProvider.hashPrefix('');
 });

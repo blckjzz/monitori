@@ -8200,6 +8200,35 @@ button.close {
   /* Standard syntax */
   transition: .5s; }
 
+.padding-top-menu {
+  padding-top: 100px; }
+
+.header {
+  background-image: url("../images/bg-login.jpg");
+  padding-bottom: 50px; }
+
+.page-title {
+  font-size: 4em;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 900;
+  vertical-align: center;
+  text-align: center; }
+
+.page-title:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  height: 10px;
+  width: 50%;
+  border-bottom: 4px solid #f0ad4e; }
+
+.page-subtitle {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  border-left: 4px solid #f0ad4e;
+  padding-left: 5px; }
+
 @media screen and (max-width: 550px) {
   .flex-responsive-col {
     height: 50vh !important; } }
