@@ -28,5 +28,5 @@ Route::group(['middleware' => 'cors'], function () {
         Route::post('/disciplina/{id}/unteach', 'DisciplinaController@unteach');
     });
 
-    Route::get('/login', 'AuthController@login');
+    Route::post('/login', 'AuthController@login');
 });
