@@ -28,6 +28,6 @@ class CreateUserDisciplinaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mo_curso_disciplina');
+        Schema::dropIfExists('mo_user_disciplina');
     }
 }
