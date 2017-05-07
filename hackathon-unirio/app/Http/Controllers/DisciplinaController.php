@@ -21,6 +21,10 @@ class DisciplinaController extends Controller
             $query->take('limit');
         }
 
+        if ($request->has('curso_id')) {
+            $query->whereCursoId($request->curso_id);
+        }
+
         return response()->json($query->get());
     }
 

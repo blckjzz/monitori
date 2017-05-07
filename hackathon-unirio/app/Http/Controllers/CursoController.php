@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Disciplina;
 use Illuminate\Http\Request;
 use App\Curso;
 
@@ -93,9 +94,16 @@ class CursoController extends Controller
         return response()->json(['success' => 'Curso com sucesso'])->getStatusCode(201);
     }
 
-    public function showDisciplinasCurso($id){
-        $curso = Curso::find($id);
-        return response()->json($curso->disciplinas);
+    public function showDisciplinasCurso(Request $request, $id){
+        $query = Disciplina::whereHas('cursos', function ($query) use ($id) {
+            return $query->whereId($id);
+        });
+
+        if ($request->has('apenas_com_monitores')) {
+            $query->has('monitores');
+        }
+
+        return response()->json($query->get());
 
     }
 }

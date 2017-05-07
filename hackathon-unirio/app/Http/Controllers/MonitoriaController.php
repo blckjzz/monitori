@@ -98,7 +98,7 @@ class MonitoriaController extends Controller
     {
         $monitoria = Monitoria::find($id);
         $monitoria->delete();
-        return response()->json(['success' => 'Removido com sucesso'])->getStatusCode(201);
+        return response()->json(['success' => 'Removido com sucesso'])->getStatusCode(200);
     }
 
     /**
@@ -122,9 +122,17 @@ class MonitoriaController extends Controller
     public function solicitarMonitoria(Request $request){
 
         //puxar alguém com interesse em uma disciplina que foi passada no request
-        Monitoria::create($request->all());
+        $request->all();
 
-        return response()->json($request->all());
+
+
+        return response()->json(['success' => 'Monitoria solicitada!'])->getStatusCode(201);
+
+        return response()->json(['error' => 'Monitoria não pode ser realizada!'])->getStatusCode(200);
+
+
     }
+
+
 
 }
