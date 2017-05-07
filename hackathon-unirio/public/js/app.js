@@ -15,5 +15,5 @@ var app = angular.module('monitori', ['ngRoute'])
       templateUrl: 'views/meu-painel.html',
       controller: 'MeuPainelController'
   });
-  $locationProvider.hashPrefix('');
+  $locationProvider.html5Mode(true);
 });
