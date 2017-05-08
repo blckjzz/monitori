@@ -1,4 +1,4 @@
-## Mentori ##
+## Monitori ##
 
 Uma rede colaborativa de ensino.
 
@@ -7,7 +7,9 @@ Uma rede colaborativa de ensino.
 1. Instale o composer
 2. Execute na pasta do projeto: composer install
 3. Execute na pasta do projeto: php artisan serve
-4. Acesse http://localhost:8000/
+4. Para começar a aplicação com dados fictícios execute: php artisan db:seed
+5. Acesse http://localhost:8000/
+
 
 - Diagrama de casos de uso
 
